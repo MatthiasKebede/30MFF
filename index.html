@@ -5,47 +5,49 @@
 		<meta name="viewport" content="width=device-width">
 		<title>A Day in the Life</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />
-        <!-- <link rel="icon" type="" href="./src/icon.ico" /> -->
+        <link rel="icon" href="./src/torch.png" />
 	</head>
 
 	<body>
 
-            <header class="header">
-                <h1>A Day in the Life at NYUAD</h1>
+            <header class="nav_bar">
+                <img id="ico" src="./src/NYUAD.png" width="" height=""/>
+                <button type="button" class="button" id="intro_button" onclick="scrollIntro()">Introduction</button>
+                <button type="button" class="button" id="vid_button" onclick="scrollVid()">Video</button>
+                <button type="button" class="button" id="about_button" onclick="scrollAbout()">About</button>
             </header>
 
-            <div class="intro">
-                <p class="text_intro">Text introduction for video. Lorem ipsum dolor sit amet, 
-consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <img class="cover_image" src="./src/campus.jpg" width="40%" height="40%" />
+            <div class="header">
+                <h1>A Day in the Life at NYUAD</h1>
             </div>
 
+            <div class="intro">
+                <p class="text_intro">
+                    NYUAD provides you with access to courses ranging from engineering and the social sciences to the sciences, arts, and humanities, but the magic lies in what life beyond the classroom looks like. On campus, your average day can take you from a cutting-edge research laboratory or engineering design studio to an experimental black box theater or woodworking shop. In the city, your days can be spent at historic parts of the city like Hamdan Street, taking a stroll across fish markets and vegetable souqs, exploring the city’s emerging art scene—from grassroots art galleries to the Louvre Abu Dhabi— or drinking karak chai in a small, corner shop. In Abu Dhabi, nights are spent camping under the stars in the desert, and afternoons are spent kayaking in the Mangrove National Forest.
+                    <br><br>
+                    If you study abroad at NYU Abu Dhabi, you will experience being a part of a tight-knit, on-campus community. With over 70 student clubs, outstanding gym and athletic facilities, welcoming spaces to connect with fellow students and professors, as well as countless internships, research, and volunteering opportunities to choose from, you will create ties that will go beyond your time in Abu Dhabi.
+                </p>
+                <img id="cover_image" src="./src/first.jpg" width="50%" height="50%" />
+            </div>
+
+            <div id="dim"></div>
+
             <div class="video">
-                <video width="540px" height="960px" controls>
-                    <source src="./src/30MFF.mp4" type="video/mp4" />
+                <video id="video" src="./src/30MFF.mp4" type="video/mp4" width="50%" height="50%" controls onplaying="dimOn()" onended="dimOff()" onpause="dimOff()">
                 </video>
             </div>
 
-            <div class="image_carousel">
-                <p>images</p>
-                <img src="./src/campus.jpg" width="50%" height="50%"/>
+            <div class="image_carousel" onclick="swap()">
+                <img class="carousel_image" src="./src/first.jpg"/>
             </div>
 
-            <footer>
-                <p>Footer</p>
+            <footer class="footer">
+                <p>About NYUAD</p>
             </footer>
 
 
 
             
-    <!-- the script tags go at the bottom of the page, so that they are loaded last -->
-		<!--<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>-->
-		<!--<script src="scripts.js"></script>-->
-
-
+		<script src="./scripts/main.js"></script>
 	</body>
 </html>
