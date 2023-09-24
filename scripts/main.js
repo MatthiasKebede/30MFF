@@ -27,12 +27,19 @@ function scrollAbout() {about.scrollIntoView()};
 function dimOn() {dimmer.style.display = "block"};
 function dimOff() {dimmer.style.display = "none"};
 
-function swap() {
-    if (i == 0) {img.setAttribute("src","./src/second.jpg"); i++}
-    else if (i == 1) {img.setAttribute("src","./src/third.jpg");i++}
-    else {img.setAttribute("src","./src/first.jpg");i=0}
-    // console.log(i)
-};
+function swap(a) {
+    if (a == 0) { // previous button
+        if (i == 0) {img.setAttribute("src","./src/third.jpg"); i=2}
+        else if (i == 1) {img.setAttribute("src","./src/first.jpg");i--}
+        else {img.setAttribute("src","./src/second.jpg");i=1}
+    }
+    else if (a == 1) { // next button
+        if (i == 0) {img.setAttribute("src","./src/second.jpg"); i++}
+        else if (i == 1) {img.setAttribute("src","./src/third.jpg");i++}
+        else {img.setAttribute("src","./src/first.jpg");i=0}
+        // console.log(i)
+    };
+}
 
 
 // Event listeners:

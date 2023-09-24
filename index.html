@@ -27,7 +27,7 @@
                     <br><br>
                     If you study abroad at NYU Abu Dhabi, you will experience being a part of a tight-knit, on-campus community. With over 70 student clubs, outstanding gym and athletic facilities, welcoming spaces to connect with fellow students and professors, as well as countless internships, research, and volunteering opportunities to choose from, you will create ties that will go beyond your time in Abu Dhabi.
                 </p>
-                <img id="cover_image" src="./src/first.jpg" width="50%" height="50%" />
+                <img id="cover_image" src="./src/first.jpg"/>
             </div>
 
             <div id="dim"></div>
@@ -37,12 +37,15 @@
                 </video>
             </div>
 
-            <div class="image_carousel" onclick="swap()">
+            <div class="image_carousel">
+                <a class="nav_arrow" id="previous" onclick="swap(0)">&#10094;</a>
                 <img class="carousel_image" src="./src/first.jpg"/>
+                <a class="nav_arrow" id="next" onclick="swap(1)">&#10095;</a>
             </div>
 
             <footer class="footer">
-                <p>About NYUAD</p>
+                <h3 style="padding-bottom: 10px;"><a style="color: inherit;" style="text-decoration: none;" href="https://nyuad.nyu.edu/en/about.html">About NYUAD</a></h3>
+                <p>Learn more about our campus and start your journey towards becoming a Global Leader!</p>
             </footer>
 
 
